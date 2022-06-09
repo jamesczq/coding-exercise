@@ -1,8 +1,8 @@
 """
 Two Sum
 
-Given an array of integers nums and an integer target, return indices of the 
-two numbers such that they add up to target.
+Given an array of integers nums and an integer target, return the two numbers
+such that they add up to target, if they exist.
 
 You can assume that each input would have exactly one solution, and you may 
 not use the same element twice.
@@ -24,7 +24,6 @@ def two_sum_v1(nums: List[int], target: int) -> Union[Tuple, None]:
     return None
 
 def two_sum_v2(nums: List[int], target: int) -> Union[Tuple, None]:
-    #nums_hash = {num:i for i,num in enumerate(nums)}
     arr = sorted(nums)
     i, j = 0, len(arr) - 1
     while i < j:
