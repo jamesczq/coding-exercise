@@ -1,2 +1,3 @@
 Date,Filename,Description
-06/08/2022,two_sum.py,"Given an array of ints (Nums) and an int (Target), find if any two ints from Nums add up to Target"
+06/08/2022,two_sum.py,"Given an array of ints (Nums) and an int (Target), find if any two ints from Nums add up to Target."
+06/09/2022,merge_two_lists.py,"Merge two sorted lists into a new sorted list."
