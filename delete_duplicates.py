@@ -34,7 +34,7 @@ def get_args():
 def main():
     args = get_args()
     if not args.array:
-        arr = [1, 2, 3, 3, 5, 5, 5, 9, 9, 11, 11, 11, 11, 11, 11, 13, 13, 15]
+        arr = [1, 2, 3, 3, 5, 5, 5, 9, 9]
         arr2 = get_unique_values(arr)
         str_out = f"Example: DeleteDups({arr}) = {arr2}"
     else:
