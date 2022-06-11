@@ -2,3 +2,8 @@ Date,Filename,Description
 06/08/2022,two_sum.py,"Given an array of ints (Nums) and an int (Target), find if any two ints from Nums add up to Target."
 06/09/2022,merge_two_lists.py,"Merge two sorted lists into a new sorted list."
 06/09/2022,delete_duplicates.py,"Delete duplicates from a sorted list."
+06/10/2022,fibonacci.py,"Compute n-th Fibonacci number using dynamic programming."
+06/10/2022,is_subarray.py,"Given two arrays, determine if one array is the subarray of the other." 
+06/10/2022,first_recurrent_number.py,"Find the first recurrent number in a sequence of numbers."
+06/10/2022,array_max.py,"Return the max of an array using recursion."
+06/10/2022,anagrams.py,"Determine if two words are anagrams of each other."
