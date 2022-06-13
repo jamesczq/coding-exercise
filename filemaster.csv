@@ -8,3 +8,4 @@ Date,Filename,Description
 06/10/2022,array_max.py,"Return the max of an array using recursion."
 06/10/2022,anagrams.py,"Determine if two words are anagrams of each other."
 06/11/2022,linked_list.py,"Linked list; insert a node; delete a node."
+06/12/2022,linked_list_reverse.py,"Print a linked list in reverse without physically reversing it."
