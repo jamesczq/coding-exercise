@@ -12,3 +12,4 @@ Date,Filename,Description
 06/13/2022,sampling.py,"Return a permutation: choose m samples without replacement from [0, 1, 2, ..., n-1]."
 06/14/2022,binary_search.py,"Binary search a sorted array using a built-in library Bisect."
 06/14/2022,intersection.py,"Return intersection between two sorted ararys consisting of unique elements only."
+06/15/2022,longest_substring.py,"Return the length of the longest substring without repeating characters."
