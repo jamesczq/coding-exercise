@@ -13,3 +13,4 @@ Date,Filename,Description
 06/14/2022,binary_search.py,"Binary search a sorted array using a built-in library Bisect."
 06/14/2022,intersection.py,"Return intersection between two sorted ararys consisting of unique elements only."
 06/15/2022,longest_substring.py,"Return the length of the longest substring without repeating characters."
+06/16/2022,balanced_paren.py,"Return true/false if a string containing balanced pairs of (), [], {}."
