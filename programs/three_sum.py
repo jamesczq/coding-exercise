@@ -4,6 +4,8 @@ Triplet that add to a given value
 Example:
 Input: arr = [1,2,3,4,5], sum = 9
 Output: {1,3,5}
+
+Created on Sat Jun 18 2022
 """
 
 from typing import List
