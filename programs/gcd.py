@@ -1,5 +1,5 @@
 """
-Find the greatest common divider (gcd) using Euclid's algorithm
+Find the greatest common divisor (gcd) using Euclid's algorithm
 
 Example:
 gcd(1440, 408) = 24
