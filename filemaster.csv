@@ -16,3 +16,5 @@ Date,Filename,Description
 06/16/2022,balanced_paren.py,"Determine if a string containing balanced pairs of (), [], {} in correct order."
 06/17/2022,longest_subarray.py,"Find the longest sub-array that sums to 0."
 06/18/2022,three_sum.py,"Find if any three numbers in an array add up to a given sum."
+06/19/2022,zero_sum_subarray.py,"Find if there is a subarray that sums to zero."
+06/19/2022,gcd.py,"Find the greatest common divider (gcd) with Euclid's algorithm."
