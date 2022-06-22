@@ -19,3 +19,4 @@ Date,Filename,Description
 06/19/2022,zero_sum_subarray.py,"Find if there is a subarray that sums to zero."
 06/19/2022,gcd.py,"Find the greatest common divisor (gcd) with Euclid's algorithm."
 06/20/2022,root.py,"Find a root of a polynomial around a given point."
+06/21/2022,linear_sort.py,"Implement the linear time direct-access-array and counting sorts."
