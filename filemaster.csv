@@ -20,3 +20,4 @@ Date,Filename,Description
 06/19/2022,gcd.py,"Find the greatest common divisor (gcd) with Euclid's algorithm."
 06/20/2022,root.py,"Find a root of a polynomial around a given point."
 06/21/2022,linear_sort.py,"Implement the linear time direct-access-array and counting sorts."
+06/22/2022,largest_sub_sum.py,"Find the largest sum of two elements in an array less than a given value." 

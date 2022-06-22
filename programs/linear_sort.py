@@ -30,7 +30,9 @@ def direct_access_array_sort(arr: List[int]) -> None:
             i += 1 
 
 def counting_sort(arr: List[int]) -> None:
-    """In-place sorting. This does not require unique array elements."""
+    """In-place sorting. This does not require unique array elements.
+    Here, requires that all elements >= 0.
+    """
     u = 1 + max(arr)
     aux = [[] for _ in range(u)]
     for k in arr:
@@ -41,6 +43,15 @@ def counting_sort(arr: List[int]) -> None:
         for x in chain:
             arr[i] = x
             i += 1
+
+def counting_sort_v2(arr: List[int]) -> None:
+    """In-place sorting. This does not require unique array elements.
+    Here, allows array elements to be negative.
+    """
+    arr_max = max([abs(x) for x in arr])
+    arr1 = [x + arr_max for x in arr]
+    counting_sort(arr1)
+    return [x - arr_max for x in arr1]
 
 def main():
     # Generate 10 random ints between 0 and u, no repeating ones
@@ -61,6 +72,16 @@ def main():
     print("\n*Counting sort (can have duplicates in array)")
     print("Array before sorting:", arr)
     counting_sort(arr)
+    print("Array after sorting: ", arr)
+
+    # Generate 10 random ints between -u and u, repeating ones allowed
+    u = 20
+    n = 10
+    arr = [random.randrange(-u, u) for _ in range(n)]
+    print("\n*Counting sort (can have duplicates in array)")
+    print("(for arrays with negative ints: first shift all nums to positive)")
+    print("Array before sorting:", arr)
+    arr = counting_sort_v2(arr)
     print("Array after sorting: ", arr)
     print("\n")
 
