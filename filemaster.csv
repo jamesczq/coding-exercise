@@ -6,7 +6,7 @@ Date,Filename,Description
 06/10/2022,is_subarray.py,"Determine if one array is a subarray of the other."
 06/10/2022,first_recurrent_number.py,"Find the first recurrent number in a sequence."
 06/10/2022,array_max.py,"Return the max of an array using recursion."
-06/10/2022,anagrams.py,"Determine if two words are anagram of each other."
+06/10/2022,are_anagrams.py,"Determine if two words are anagram of each other."
 06/11/2022,linked_list.py,"Linked list: insert a node; delete a node."
 06/12/2022,linked_list_reverse.py,"Print a linked list in reverse without physically reversing it."
 06/13/2022,sampling.py,"Return a permutation: choose m samples without replacement from [0, 1, 2, ..., n-1]."
