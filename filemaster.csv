@@ -22,3 +22,4 @@ Date,Filename,Description
 06/21/2022,linear_sort.py,"Implement the linear time direct-access-array and counting sorts."
 06/22/2022,largest_sub_sum.py,"Find the largest sum of two elements in an array that is less than a given value."
 06/23/2022,staircase_recursion.py,"Find number of ways of going up N steps using recursion."
+06/23/2022,anagrams_recursion.py,"Return all possible anagrams of a string of length n."
