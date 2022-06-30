@@ -14,7 +14,6 @@ all(val >= x for val in a[i : hi]) for the right side.
 Created on Tue Jun 14 2022.
 """
 from typing import List, Union
-import argparse
 import bisect
 import random 
 

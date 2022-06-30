@@ -27,3 +27,5 @@ Date,Filename,Description
 06/25/2022,disk_usage.py,"Compute disk usage of a folder using recursion."
 06/26/2022,bst_search.py,"Search a key in a binary search tree."
 06/27/2022,valid_subseq.py,"Determine if a sequence is a valid subsequence of an array."
+06/28/2022,sorted_squares.py,"Return squares of an integer (positive or negative) array in sorted order."
+06/29/2022,binary_search_recursion.py,"Binary search using recursion."
