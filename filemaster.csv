@@ -29,3 +29,5 @@ Date,Filename,Description
 06/27/2022,valid_subseq.py,"Determine if a sequence is a valid subsequence of an array."
 06/28/2022,sorted_squares.py,"Return squares of an integer (positive or negative) array in sorted order."
 06/29/2022,binary_search_recursion.py,"Binary search using recursion."
+07/20/2022,bst.py,"Implement the binary search tree data structure., making BST available for future easy use."
+07/20/2022,nearest_value_in_bst.py,"Find the nearest value in a BST to a given target value."
