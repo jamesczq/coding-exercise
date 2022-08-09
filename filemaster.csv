@@ -32,3 +32,8 @@ Date,Filename,Description
 07/20/2022,bst.py,"Implement the binary search tree data structure, making BST available for future use."
 07/20/2022,nearest_value_in_bst.py,"Find the nearest value in a BST to a given target value."
 07/20/2022,non_constructible_change.py,"Find the minimum amount of change you cannot create."
+08/08/2022,branch_sums.py,"Find a list of branch sums of a given binary tree."
+08/08/2022,node_depths.py,"Find the sum of depths of all nodes in a tree."
+08/08/2022,dfs.py,"Depth first search."
+08/08/2022,min_waiting_time.py,"Find the minimum total waiting time for all queries."
+08/08/2022,class_photos.py,"Determine if a class photo can be done given three rules."

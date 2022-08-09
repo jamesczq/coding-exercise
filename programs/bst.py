@@ -1,6 +1,14 @@
 """
 Implement Binary Search Tree, only upto inserting tree nodes.
 
+             10
+         /        \
+       5          15
+      /   \       /   \
+     2     5    13     22
+   /             \ 
+  1               14
+
 Created on Wed Jul 20, 2022
 """
 
@@ -40,6 +48,14 @@ def in_order_traversal(root):
     return left_list + [root.value] + right_list
 
 def get_example_bst(values = [10, 5, 2, 1, 5, 15, 13, 14, 22]):
+    # Construct the following BST
+    #             10
+    #         /        \
+    #        5          15
+    #      /   \       /   \
+    #     2     5    13     22
+    #    /             \ 
+    #   1               14
     tree = BST()
     for value in values:
         tree.insert(value)
