@@ -1,6 +1,8 @@
 """
 Define classes and use inheritance to define arithmetic, geometric, and 
 Fibonacci series.
+
+Created on Sun Mar 19 2023
 """
 
 
