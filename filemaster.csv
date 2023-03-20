@@ -39,3 +39,4 @@ Date,Filename,Description
 08/08/2022,class_photos.py,"Determine if a class photo can be done given three rules."
 08/12/2022,three_sum.py,"Find triplets in an array that sum up to a given target value."
 08/12/2022,move_element_to_end.py,"Move all elements of a given value in an array to the end."
+03/19/2023,series.py,"Use class inheritance to define arithmetic, geometric, and Fibonacci series."
