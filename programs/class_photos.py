@@ -16,12 +16,14 @@ Output:
 
 Created on Mon Aug 08, 2022
 """
-from typing import List 
+
+from typing import List
+
 
 def class_photos(red_heights: List[int], blue_heights: List[int]) -> bool:
     # The tallest of all students, be in red or blue, must be in the back row,
     # which can tell the back row should be red or blue.
-    
+
     assert len(red_heights) == len(blue_heights)
 
     red_heights.sort(reverse=True)
@@ -33,14 +35,15 @@ def class_photos(red_heights: List[int], blue_heights: List[int]) -> bool:
         row1, row2 = red_heights, blue_heights
     elif red_max > blue_max:
         row1, row2 = blue_heights, red_heights
-    else: # red_max == blue_max
-        return False 
-    
+    else:  # red_max == blue_max
+        return False
+
     for i in range(len(row1)):
         if row1[i] >= row2[i]:
-            return False 
-    
-    return True 
+            return False
+
+    return True
+
 
 def main():
     red_heights = [5, 8, 1, 3, 6]
@@ -48,6 +51,7 @@ def main():
     print("Red:", red_heights)
     print("Blue:", blue_heights)
     print(class_photos(red_heights=red_heights, blue_heights=blue_heights))
+
 
 if __name__ == "__main__":
     main()

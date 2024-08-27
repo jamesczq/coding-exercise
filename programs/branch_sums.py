@@ -24,21 +24,24 @@ Created on Mon Aug 08, 2022
 
 import bst
 
+
 # Use recursion along the Depth First Search direction
 def branch_sums_helper(node, running_sum=0, sums=[]):
     if node is None:
-        return 
+        return
     new_running_sum = running_sum + node.value
     if not (node.left or node.right):
-        sums.append(new_running_sum) 
+        sums.append(new_running_sum)
         return
     branch_sums_helper(node.left, new_running_sum, sums)
     branch_sums_helper(node.right, new_running_sum, sums)
+
 
 def branch_sums(tree):
     sums = []
     branch_sums_helper(tree.node, running_sum=0, sums=sums)
     return sums
+
 
 def main():
     tree = bst.get_example_bst()
@@ -48,6 +51,6 @@ def main():
     for s in sums:
         print(s)
 
+
 if __name__ == "__main__":
     main()
-

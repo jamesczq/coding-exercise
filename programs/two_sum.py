@@ -9,8 +9,10 @@ not use the same element twice.
 
 Created on Wed Jun 08 2022
 """
+
 from typing import List, Tuple, Union
 import argparse
+
 
 def two_sum_v1(nums: List[int], target: int) -> Union[Tuple, None]:
     visited = {nums[0]: 0}
@@ -20,8 +22,9 @@ def two_sum_v1(nums: List[int], target: int) -> Union[Tuple, None]:
         if y in visited:
             return (x, y)
         else:
-            visited[x] = i 
+            visited[x] = i
     return None
+
 
 def two_sum_v2(nums: List[int], target: int) -> Union[Tuple, None]:
     arr = sorted(nums)
@@ -30,19 +33,21 @@ def two_sum_v2(nums: List[int], target: int) -> Union[Tuple, None]:
         mysum = arr[i] + arr[j]
         if mysum < target:
             i += 1
-        elif mysum  > target:
+        elif mysum > target:
             j -= 1
         else:
             return (arr[i], arr[j])
     return None
 
+
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', "--version", type=int, default=1)
-    parser.add_argument('--nums', nargs="+", type=int)
-    parser.add_argument('--target', type=int)
+    parser.add_argument("-v", "--version", type=int, default=1)
+    parser.add_argument("--nums", nargs="+", type=int)
+    parser.add_argument("--target", type=int)
     args = parser.parse_args()
     return args
+
 
 def main():
     args = get_args()
@@ -52,11 +57,11 @@ def main():
         ans = two_sum_v2(args.nums, args.target)
     return ans
 
+
 if __name__ == "__main__":
     ans = main()
     if ans:
         x, y = ans[0], ans[1]
         print(x, y)
-    else: 
+    else:
         print("No such two numbers found!")
-

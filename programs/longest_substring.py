@@ -19,14 +19,16 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 
 Created on Wed Jun 15 2022
 """
-import argparse 
+
+import argparse
+
 
 # Use sliding window plus hashset to achieve O(n) runtime:
 # - Use a hashSet to store the chars in the current window [i, j)
 # - If s[j] is not in hashSet, slide j to the right until s[j] is in the hashSet
 # - Do this for i
 def longest_substr(s: str) -> int:
-    chars = [0]*128
+    chars = [0] * 128
     i, j = 0, 0
     res = 0
 
@@ -38,18 +40,20 @@ def longest_substr(s: str) -> int:
             l_char = s[i]
             chars[ord(l_char)] -= 1
             i += 1
-        
+
         res = max(res, j - i + 1)
 
-        j += 1 
-    
-    return res 
+        j += 1
+
+    return res
+
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", type=str, default=None, required=False)
     args = parser.parse_args()
-    return args 
+    return args
+
 
 def main():
     args = get_args()
@@ -60,6 +64,7 @@ def main():
             print(s, " | ", longest_substr(s))
     else:
         print(args.s, " | ", longest_substr(args.s))
+
 
 if __name__ == "__main__":
     main()

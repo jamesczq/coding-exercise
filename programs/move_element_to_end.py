@@ -12,11 +12,13 @@ output: [1, 3, 4, 2, 2, 2, 2, 2]
 
 Created on Fri Aug 05, 2022
 """
-from typing import List 
+
+from typing import List
+
 
 def move(array: List[int], toMove: int) -> List[int]:
     # Use two-pointer technique
-    i, j = 0, len(array)-1
+    i, j = 0, len(array) - 1
     while i < j:
         if array[i] == toMove and array[j] == toMove:
             j -= 1
@@ -26,7 +28,8 @@ def move(array: List[int], toMove: int) -> List[int]:
             j -= 1
         if array[i] != toMove:
             i += 1
-    return array 
+    return array
+
 
 def main():
     arr = [2, 5, 1, 5, 2, 5, 3, 4, 2, 5, 5]
@@ -34,6 +37,7 @@ def main():
     str_out = f"Moving all {toMove}s to the end of {arr}\n gives"
     str_out += f"{move(arr, toMove)}"
     print(str_out)
+
 
 if __name__ == "__main__":
     main()

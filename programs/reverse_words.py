@@ -25,9 +25,11 @@ Input: s = "a good   example"
 Output: "example good a"
 Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
 """
+
 from typing import List
 
-def locs_of_words(str_in:str) -> List[List[int]]:
+
+def locs_of_words(str_in: str) -> List[List[int]]:
     """_summary_
 
     Args:
@@ -44,8 +46,9 @@ def locs_of_words(str_in:str) -> List[List[int]]:
             arr_tmp.append(i)
         else:
             arr_tmp = []
-            arr_out.append(arr_tmp)    
+            arr_out.append(arr_tmp)
     return [arr for arr in arr_out if arr]
+
 
 def str2words(str_in: str) -> List[str]:
     """_summary_
@@ -61,9 +64,10 @@ def str2words(str_in: str) -> List[str]:
     for sublist in word_locs:
         str_tmp = ""
         for i in sublist:
-            str_tmp += str_in[i] 
+            str_tmp += str_in[i]
         arr_out.append(str_tmp)
     return arr_out
+
 
 def reverse_string(str_in: str) -> str:
     """_summary_
@@ -76,11 +80,12 @@ def reverse_string(str_in: str) -> str:
     """
     words = str2words(str_in)
     str_out = ""
-    for i in range(len(words)-1, 0, -1):
+    for i in range(len(words) - 1, 0, -1):
         str_out += words[i]
         str_out += " "
     str_out += words[0]
     return str_out
+
 
 def main():
     test_strings = ["  hello world  ", "a good   example", "the sky is blue"]
@@ -89,6 +94,7 @@ def main():
         print("Words:", str2words(str_in), " are located at:", locs_of_words(str_in))
         print("When reversed, they become:", f'"{reverse_string(str_in)}"')
         print("\n")
+
 
 if __name__ == "__main__":
     main()

@@ -11,6 +11,7 @@ Output: False
 
 Created on Sun Jun 19 2022
 """
+
 from typing import List
 import argparse
 
@@ -20,21 +21,24 @@ import argparse
 # it means there is a zero-sum subarray:
 # 0 + a[i+1] + ... + a[j] = a[i+1] + ... + a[j]
 
+
 def subarr_exists(arr: List[int]) -> bool:
     curr_sum = 0
     s = set()
     for i in range(len(arr)):
         curr_sum += arr[i]
         if curr_sum == 0 or curr_sum in s:
-            return True 
+            return True
         s.add(curr_sum)
-    return False 
+    return False
+
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("array", nargs="+", type=int)
     args = parser.parse_args()
-    return args 
+    return args
+
 
 def main():
     args = get_args()
@@ -42,6 +46,7 @@ def main():
         print("Zero-sum subarray exists!")
     else:
         print("Zero-sum subarray does not exist!")
+
 
 if __name__ == "__main__":
     main()

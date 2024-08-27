@@ -14,7 +14,9 @@ Hint: which left parenthesis does a right parenthesis match with?
 
 Created on Thu Jun 16 2022
 """
+
 import argparse
+
 
 # Use Stack
 # - Store the unmatched (yet) left ( or [ or {
@@ -25,25 +27,27 @@ def is_balanced(s: str) -> bool:
     left_paren = []
     parenL = set(["(", "[", "{"])
     parenR = set([")", "]", "}"])
-    lookup = {"(":")", "[":"]", "{":"}"}
+    lookup = {"(": ")", "[": "]", "{": "}"}
     for char in s:
         if char in parenL:
             left_paren.append(char)
         elif char in parenR:
             if not left_paren or lookup[left_paren.pop()] != char:
-                return False 
+                return False
     return not left_paren
+
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("s", type=str)
     args = parser.parse_args()
-    return args 
+    return args
+
 
 def main():
     args = get_args()
     return is_balanced(args.s)
 
+
 if __name__ == "__main__":
     print(main())
-        

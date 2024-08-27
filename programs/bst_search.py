@@ -3,13 +3,24 @@ Check if a given value is present in a BST.
 
 Created on Sat Jun 25 2022
 """
+
+
 class BSTNode:
     def __init__(self, data=None, left=None, right=None):
-        self.data, self.left, self.right = data, left, right 
+        self.data, self.left, self.right = data, left, right
+
 
 def search_bst(tree: BSTNode, key: int):
-    return (tree if not tree or tree.data == key else search_bst(
-        tree.left, key) if key < tree.data else search_bst(tree.right, key))
+    return (
+        tree
+        if not tree or tree.data == key
+        else (
+            search_bst(tree.left, key)
+            if key < tree.data
+            else search_bst(tree.right, key)
+        )
+    )
+
 
 def main():
     """         
@@ -63,8 +74,6 @@ def main():
     else:
         print(f"{k} is in the BST.")
 
+
 if __name__ == "__main__":
     main()
-
-
-

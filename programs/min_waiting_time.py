@@ -16,7 +16,8 @@ output = 17
 # 17 = min_waiting_time([1, 2, 2, 3, 6]) = 0 + 1 + (1+2) + (1+2+2) + (1+2+2+3)
 """
 
-from typing import List 
+from typing import List
+
 
 def min_waiting_time_v1(queries: List[int]):
     n = len(queries)
@@ -25,7 +26,7 @@ def min_waiting_time_v1(queries: List[int]):
     queries.sort()
     cum_sum = 0
     cum_sums = []
-    for i in range(n-1):
+    for i in range(n - 1):
         cum_sum += queries[i]
         cum_sums.append(cum_sum)
     waiting_time = 0
@@ -33,10 +34,12 @@ def min_waiting_time_v1(queries: List[int]):
         waiting_time += s
     return waiting_time
 
+
 def main():
     queries = [3, 2, 1, 2, 6]
     print("Queries:", queries)
     print("Min waiting time:", min_waiting_time_v1(queries))
+
 
 if __name__ == "__main__":
     main()

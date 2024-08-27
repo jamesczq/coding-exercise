@@ -13,15 +13,18 @@ all(val >= x for val in a[i : hi]) for the right side.
 
 Created on Tue Jun 14 2022.
 """
+
 from typing import List, Union
 import bisect
-import random 
+import random
 
 from sampling import permutation
+
 
 def main(arr: List[int], x: int) -> Union[int, None]:
     i = bisect.bisect_left(arr, x)
     return i if i < len(arr) and arr[i] == x else None
+
 
 if __name__ == "__main__":
     a1 = random.randrange(-10, 10)
@@ -33,4 +36,3 @@ if __name__ == "__main__":
         print(f"{x} is Not in {arr}")
     else:
         print(f"{x} is in {arr}: arr[{idx}] == {x}")
-        

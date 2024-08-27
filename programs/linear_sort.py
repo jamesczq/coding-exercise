@@ -10,6 +10,7 @@ The sorting methods are in-place ones.
 
 Created on Tue Jun 21 2022
 """
+
 from typing import List
 import random
 
@@ -19,15 +20,16 @@ from sampling import permutation
 def direct_access_array_sort(arr: List[int]) -> None:
     """In-place sorting. This requires array elements are unique!"""
     u = 1 + max(arr)
-    aux = [None] * u 
+    aux = [None] * u
     for k in arr:
         aux[k] = k
 
     i = 0
     for j in range(u):
-        if aux[j]: # i.e. if aux[k] is not None
+        if aux[j]:  # i.e. if aux[k] is not None
             arr[i] = aux[j]
-            i += 1 
+            i += 1
+
 
 def counting_sort(arr: List[int]) -> None:
     """In-place sorting. This does not require unique array elements.
@@ -44,6 +46,7 @@ def counting_sort(arr: List[int]) -> None:
             arr[i] = x
             i += 1
 
+
 def counting_sort_v2(arr: List[int]) -> None:
     """In-place sorting. This does not require unique array elements.
     Here, allows array elements to be negative.
@@ -52,6 +55,7 @@ def counting_sort_v2(arr: List[int]) -> None:
     arr1 = [x + arr_max for x in arr]
     counting_sort(arr1)
     return [x - arr_max for x in arr1]
+
 
 def main():
     # Generate 10 random ints between 0 and u, no repeating ones
@@ -85,8 +89,6 @@ def main():
     print("Array after sorting: ", arr)
     print("\n")
 
+
 if __name__ == "__main__":
     main()
-
-
-

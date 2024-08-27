@@ -6,8 +6,10 @@ Example:
 
 Created on Thu Jun 09 2022
 """
+
 from typing import List
 import argparse
+
 
 def get_unique_indices(arr: List[int]) -> List[int]:
     """Return indices of unique, non-duplicate, elements of a sorted list."""
@@ -21,15 +23,18 @@ def get_unique_indices(arr: List[int]) -> List[int]:
             non_dup_index = i + 1
     return list_out
 
+
 def get_unique_values(arr: List[int]) -> List[int]:
     non_dup_indices = get_unique_indices(arr)
     return [arr[i] for i in non_dup_indices]
 
+
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', "--array", nargs="+", type=int, required=False)
+    parser.add_argument("-a", "--array", nargs="+", type=int, required=False)
     args = parser.parse_args()
     return args
+
 
 def main():
     args = get_args()
@@ -41,7 +46,8 @@ def main():
         arr2 = get_unique_values(args.array)
         str_out = f"DeleteDups({args.array}) = {arr2}"
     return str_out
-        
+
+
 if __name__ == "__main__":
     print("\nDelete duplicates from a sorted array:")
     print(main() + "\n")

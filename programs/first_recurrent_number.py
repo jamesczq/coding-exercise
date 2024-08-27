@@ -10,8 +10,10 @@ it should return None
 
 Created on Fri Jun 10 2022
 """
+
 from typing import List, Union
 import argparse
+
 
 def get_first_recur(arr: List[int]) -> Union[int, None]:
     visited = {arr[0]: 1}
@@ -20,18 +22,20 @@ def get_first_recur(arr: List[int]) -> Union[int, None]:
             return arr[i]
         else:
             visited[arr[i]] = 1
-    return None 
+    return None
+
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("array", nargs="+", type=int)
     args = parser.parse_args()
-    return args 
+    return args
+
 
 def main():
     args = get_args()
     return get_first_recur(args.array)
 
+
 if __name__ == "__main__":
     print(main())
-

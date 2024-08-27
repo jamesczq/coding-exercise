@@ -8,16 +8,19 @@ A string of length n should have n! anagrams.
 
 Created on Thu Jun 23 2022
 """
+
 from typing import List
 import argparse
+
 
 # Use recursion: say to find anagrams of "abcd",
 # imagine you already have a list of anagrams of "abc".
 # So the problem becomes inserting "d" to each of the anagrams of "abc":
-# d-abc, a-d-bc, ab-d-c, abc-d, 
+# d-abc, a-d-bc, ab-d-c, abc-d,
 # d-bac, b-d-ac, ba-d-c, bac-d, etc.
 def get_anagrams(s: str) -> List[str]:
-    if len(s) == 1: return [s[0]]
+    if len(s) == 1:
+        return [s[0]]
 
     collection = []
     substring_anagrams = get_anagrams(s[1:])
@@ -30,20 +33,25 @@ def get_anagrams(s: str) -> List[str]:
 
     return collection
 
+
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("s", type=str)
     parser.add_argument("-d", "--details", type=bool, default=False)
     args = parser.parse_args()
-    return args 
+    return args
+
 
 def main():
     args = get_args()
     collection = get_anagrams(args.s)
     if args.details:
-        print(f"There are {len(collection)} for '{args.s}' of length {len(args.s)}:\n{collection}")
+        print(
+            f"There are {len(collection)} for '{args.s}' of length {len(args.s)}:\n{collection}"
+        )
     else:
         print(f"There are {len(collection)} for '{args.s}' of length {len(args.s)}")
+
 
 if __name__ == "__main__":
     main()
